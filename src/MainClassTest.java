@@ -3,6 +3,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.*;
+
 public class MainClassTest extends MainClass {
     @Before
     public void textStartedTest() {
@@ -16,17 +18,19 @@ public class MainClassTest extends MainClass {
 
     @Test
 
-    public void testGetClassNumber() {
+    public void testGetClassString() {
 
-        System.out.println("firstTest");
-        int a = 45;
-        int b = this.getClassNumber();
-        Assert.assertTrue("getClassNumber  из MainClass  возвращает число меньше 45", a <= b);
+
+        String a = getClassString();
+
+        Assert.assertTrue("Строка class_string в MainClass не содержит подстроку Hello/hello ",a.toLowerCase().contains("hello"));
+
 
 
     }
 
 
 }
+
 
 
