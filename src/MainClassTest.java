@@ -16,14 +16,17 @@ public class MainClassTest extends MainClass {
 
     @Test
 
-
-    public void testGetLocalNumber() {
+    public void testGetClassNumber() {
 
         System.out.println("firstTest");
-        int a = 14;
-        int b = this.getLocalNumer();
-        Assert.assertTrue("getLocalNumber  из MainClass не возвращает 14", a == b);
+        int a = 45;
+        int b = this.getClassNumber();
+        Assert.assertTrue("getClassNumber  из MainClass  возвращает число меньше 45", a <= b);
 
 
     }
+
+
 }
+
+
